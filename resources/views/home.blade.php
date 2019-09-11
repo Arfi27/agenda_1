@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
+
         <meta charset="utf-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,79 @@
     <link href="{{asset ('templates/css/animate.css') }}" rel="stylesheet">
     <link href="{{asset ('templates/css/style.css') }}" rel="stylesheet">
 
+
+{{-- css dalam head --}}
+    <style type="text/css">
+        #header{
+            width:100%;
+            background:#252525;
+            position: fixed;
+            z-index: 9999;
+        }
+#content{
+    position:relative;
+    padding-top:70px
+}
+
+#footer{
+    position:relative;
+    background:#000;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    text-align:center;
+}
+
+/*CONTENT SECTION*/
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.title{
+    color:#f0f0f0; 
+    font-weight:bold; 
+    text-decoration:none; 
+    font-size:30px; 
+    line-height:60px; 
+    padding:20px;
+}
+p{
+    padding:.5em 1em;
+    font-size:20px;
+    text-align:justify;
+}
+    </style>
+
+
+
+
     </head>
     <body>
+
+{{-- headernya --}}
+    <div id="header">
+        <a class="title">AGENDA HARIAN</a>
+                <div class="top-right links">
+                        <a href="{{ url('/') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                </div>
+    </div>
+
         <br>
+
+{{-- lingkungan websitenya --}}
+<div id="content">
 <div class="wrapper wrapper-content">
     <div class="row animated fadeInDown">
         <div class="col-lg-3">
@@ -51,46 +122,37 @@
 
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
-                                                    <span class="m-l-xs todo-completed">Buy a milk</span>
+                                                    <span class="m-l-xs todo-completed">Rapat Dengan Klien</span>
 
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
-                                                    <span class="m-l-xs">Go to shop and find some products.</span>
+                                                    <span class="m-l-xs">Menjenguk Orang</span>
 
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
-                                                    <span class="m-l-xs">Send documents to Mike</span>
+                                                    <span class="m-l-xs">Mengirimkan Dokumen</span>
                                                     <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
-                                                    <span class="m-l-xs">Go to the doctor dr Smith</span>
+                                                    <span class="m-l-xs">Pergi Ke Sekolah</span>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
-                                                    <span class="m-l-xs todo-completed">Plan vacation</span>
+                                                    <span class="m-l-xs todo-completed">Membeli Peralatan</span>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
-                                                    <span class="m-l-xs">Create new stuff</span>
+                                                    <span class="m-l-xs">Mengerjakan Pekerjaan</span>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
-                                                    <span class="m-l-xs">Call to Anna for dinner</span>
+                                                    <span class="m-l-xs">Menelepon Orang Untuk Rapat</span>
                                                 </li>
                                             </ul>
                                         </div>
-            </div>
-            <div class="ibox ">
-                <div class="ibox-content">
-                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
-                    easily configured to use your own feed format (an extension is provided for Google Calendar).
-                    <p>
-                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
-                    </p>
-                </div>
             </div>
         </div>
         <div class="col-lg-9">
@@ -121,6 +183,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 
@@ -168,54 +231,16 @@
                     $(this).remove();
                 }
             },
-            // events: [
-            //     {
-            //         title: 'All Day Event',
-            //         start: new Date(y, m, 1)
-            //     },
-            //     {
-            //         title: 'Long Event',
-            //         start: new Date(y, m, d-5),
-            //         end: new Date(y, m, d-2)
-            //     },
-            //     {
-            //         id: 999,
-            //         title: 'Repeating Event',
-            //         start: new Date(y, m, d-3, 16, 0),
-            //         allDay: true
-            //     },
-            //     {
-            //         id: 999,
-            //         title: 'Repeating Event',
-            //         start: new Date(y, m, d+4, 16, 0),
-            //         allDay: true
-            //     },
-            //     {
-            //         title: 'Meeting',
-            //         start: new Date(y, m, d, 10, 30),
-            //         allDay: true
-            //     },
-            //     {
-            //         title: 'Lunch',
-            //         start: new Date(y, m, d, 12, 0),
-            //         end: new Date(y, m, d, 14, 0),
-            //         allDay: true
-            //     },
-            //     {
-            //         title: 'Birthday Party',
-            //         start: new Date(y, m, d+1, 19, 0),
-            //         end: new Date(y, m, d+1, 22, 30),
-            //         allDay: true
-            //     },
-            //     {
-            //         title: 'Click for Google',
-            //         start: new Date(y, m, 28),
-            //         end: new Date(y, m, 29),
-            //         url: 'http://google.com/'
-            //     }
-            // ]
         });
 </script>
-    </body>
+
+<div id="footer">
+                <div>
+                    <strong>Copyright</strong> Example Company &copy; 2014-2018
+                </div>
+            </div>
+
+
+</body>
 </html>
     

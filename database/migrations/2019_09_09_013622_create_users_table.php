@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,9 +14,9 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->integer('user_id');
+            $table->increments('user_id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('telepon');
             $table->string('password');
             $table->rememberToken();

@@ -20,3 +20,12 @@ Route::get('/home', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/forgot', function () {
+    return view('forgot_password');
+});
+
+// Auth::routes();
+
+// Route::get('/', 'HomeController@index')->name('login');
+// Route::get('/register', 'HomeController@index')->name('register');

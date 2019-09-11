@@ -22,29 +22,29 @@
         <div>
             <div>
 
-                <h1 class="logo-name">AH+</h1>
+                <h1 class="logo-name">AH</h1>
 
             </div>
-            <h3>Welcome to AH+</h3>
+            <h3>Welcome to Agenda</h3>
             <p>
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
-            <p>Login dan Lihatlah Agenda Agenda</p>
+            <p>Masuk dan Lihatlah Agenda Anda</p>
             <form class="m-t" role="form" action="{{url('/home')}}">
                 <div class="form-group">
-                    <input type="Username" class="form-control" placeholder="Username" required="">
+                    <input type="email" class="form-control" placeholder="Email" required="">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Password" required="">
                 </div>
-                <a href="{{url('/home')}}"><button type="submit" class="btn btn-primary block full-width m-b">Login</button></a>
+                <a href="{{url('/home')}}"><button type="submit" class="btn btn-primary block full-width m-b">Masuk</button></a>
 
-                <a href="#"><small>Forgot password?</small></a>
-                <p class="text-muted text-center"><small>Do not have an account?</small></p>
-                <a href="{{url('/home')}}"><small>Halaman Utama Agenda</small></a>
-                <a class="btn btn-sm btn-white btn-block" href="{{url('/register')}}">Create an account</a>
+                <a href="{{url('/forgot')}}"><small>Lupa password?</small></a>
+                <p class="text-muted text-center"><small>Tidak mempunyai akun?</small></p>
+                <a href="{{url('/home')}}"><small>Halaman Agenda</small></a>
+                <a class="btn btn-sm btn-white btn-block" href="{{url('/register')}}">Buat akun sekarang</a>
             </form>
-            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+            <p class="m-t"> <small>AGENDA &copy; 2019</small> </p>
         </div>
     </div>
 
